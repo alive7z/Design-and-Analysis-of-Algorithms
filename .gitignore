@@ -1,6 +1,1 @@
-# Ignore all binaries
-a.out
-*.out
-*.exe
-*.o
 first
