@@ -2,8 +2,8 @@
 #include <vector>
 using namespace std;
 
-long long comparisons = 0;
-long long inversions = 0;
+int comparisons = 0;
+int inversions = 0;
 
 void merge(vector<int> &arr, int l, int m, int r) {
     vector<int> leftArr, rightArr;
@@ -34,7 +34,7 @@ void merge(vector<int> &arr, int l, int m, int r) {
 
 void mergeSort(vector<int> &arr, int l, int r) {
     if (l < r) {
-        int m = (l + r) / 2;
+        int m = l + (r - l) / 2;
         mergeSort(arr, l, m);
         mergeSort(arr, m + 1, r);
         merge(arr, l, m, r);
